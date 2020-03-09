@@ -31,12 +31,12 @@
 
 <script>
 export default {
+  name: "Navigation",
   data() {
     return {
       items: [
-        { title: "News", icon: "mdi-view-dashboard", path: "/" },
-        { title: "Chat", icon: "mdi-image", path: "/chat" },
-        { title: "Store", icon: "mdi-help-box", path: "/store" }
+        { title: "Карта", icon: "mdi-view-dashboard", path: "/" },
+        { title: "О проекте", icon: "mdi-image", path: "/about" },
       ],
       right: null
     };

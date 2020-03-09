@@ -1,23 +1,24 @@
 <template>
   <div>
-     <h1>Мое приложение</h1>
-    <nav>
-      <ul>
-        <li>
-          <router-link to="/">Карта</router-link>
-        </li>
-        <li>
-          <router-link to="/about">О проекте</router-link>
-        </li>
-      </ul>
-    </nav>
-    <router-view></router-view>
+    <v-container grid-list-md text-xs-center>
+      <v-layout row wrap>
+        <v-flex xs3>
+          <navigation></navigation>
+        </v-flex>
+        <v-flex xs9>
+          <router-view></router-view>
+        </v-flex>
+      </v-layout>
+    </v-container>
   </div>
 </template>
 
 <script>
-
+import Navigation from "@/components/Navigation";
 export default {
   name: "Layout",
+  components: {
+    Navigation
+  }
 };
 </script>

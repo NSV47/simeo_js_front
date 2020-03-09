@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <div>
-      <Layout></Layout>
+      <layout></layout>
     </div>
   </v-app>
 </template>
@@ -9,7 +9,7 @@
 <script>
 // import Map from "./views/Map";
 // import About from "./views/About";
-import Layout from '@/views/Layout'
+import Layout from '@/views/Layout.vue'
 export default {
   name: "App",
   components: {
@@ -17,9 +17,7 @@ export default {
     // About
     Layout
   },
-
-  data: () => ({
-    page: "About"
-  })
+  
+  data: () => ({})
 };
 </script>
