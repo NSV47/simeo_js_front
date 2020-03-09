@@ -1,12 +1,12 @@
 <template>
   <div>
-    <h2>О проекте</h2>
+    <h2>Карта</h2>
   </div>
 </template>
 
 <script>
 
 export default {
-  name: "About",
+  name: "Map",
 };
 </script>

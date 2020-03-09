@@ -1,56 +1,36 @@
 <template>
-  <v-app>
-    <v-app-bar app color="primary" dark>
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
-    <v-content>
-      <HelloWorld />
-    </v-content>
-  </v-app>
+  <div>
+    <h1>Мое приложение</h1>
+    <nav>
+      <ul>
+        <li>
+          <router-link to="/">Карта</router-link>
+        </li>
+        <li>
+          <router-link to="/about">О проекте</router-link>
+        </li>
+      </ul>
+    </nav>
+    <!-- <Map v-if="page === 'Map'"></Map>
+    <About v-if="page === 'About'"></About> -->
+    <router-view></router-view>
+  </div>
+  
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
+// import Map from "./views/Map";
+// import About from "./views/About";
 
 export default {
   name: "App",
-
   components: {
-    HelloWorld
+    // Map,
+    // About
   },
 
   data: () => ({
-    //
+    page: "About"
   })
 };
 </script>
